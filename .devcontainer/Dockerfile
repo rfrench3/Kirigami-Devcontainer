@@ -1,33 +1,13 @@
 FROM archlinux:latest
 
-# Update system and install required packages
 RUN pacman -Syu --noconfirm \
-    astyle \
     cmake \
     git \
     extra-cmake-modules \
-    curl \
     sudo \
-    # Basic build tools - gnu
-    autoconf \
-    automake \
-    bison \
-    flex \
-    gcc \
-    gperf \
     make \
-    texinfo \
-    # Basic build tools - llvm
     clang \
-    # Basic build tools - build systems
-    meson \
-    ninja \
-    # Qt-related
     qt6 \
-    # kcoreaddons
-    pyside6 \
-    shiboken6 \
-    # kf6
     kirigami \
     kcoreaddons \
     kconfig \
@@ -35,6 +15,11 @@ RUN pacman -Syu --noconfirm \
     kiconthemes \
     kirigami-addons \
     qqc2-desktop-style 
+
+# # Uncomment for python applications
+# RUN pacman -Syu --noconfirm \
+#     pyside6 \
+#     shiboken6 \
 
 # Create vscode user with sudo access
 RUN groupadd --gid 1000 vscode \
