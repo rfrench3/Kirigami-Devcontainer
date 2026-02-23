@@ -14,7 +14,8 @@ RUN pacman -Syu --noconfirm \
     ki18n \
     kiconthemes \
     kirigami-addons \
-    qqc2-desktop-style 
+    qqc2-desktop-style \
+    plasma-workspace
 
 # # Uncomment for python applications
 # RUN pacman -Syu --noconfirm \

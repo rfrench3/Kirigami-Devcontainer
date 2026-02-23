@@ -22,5 +22,6 @@
 	"privileged": true,
 	"mounts": [
 		"source=${localEnv:XDG_RUNTIME_DIR},target=${localEnv:XDG_RUNTIME_DIR},type=bind,consistency=cached"
-	]
+	],
+	"postCreateCommand": "plasma-apply-desktoptheme breeze-dark || true"
 }
