@@ -1,10 +1,12 @@
 {
-    "id": "org.kde.kirigamitemplate",
+    "id": "org.kde.newproject",
     "runtime": "org.kde.Platform",
     "runtime-version": "6.10",
     "sdk": "org.kde.Sdk",
-    "command": "kirigamitemplate",
-    "tags": ["nightly"],
+    "command": "newproject",
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
         "--share=ipc",
@@ -17,10 +19,18 @@
 
     "modules": [
         {
-            "name": "kirigamitemplate",
+            "name": "newproject",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".",
+                    "skip": [
+                        ".git"
+                    ]
+                }
+            ]
         }
     ]
 }

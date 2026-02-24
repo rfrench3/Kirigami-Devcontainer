@@ -15,12 +15,12 @@
 #include <QUrl>
 
 #include "app.h"
-#include "version-kirigamitemplate.h"
+#include "version-newproject.h"
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 
-#include "kirigamitemplateconfig.h"
+#include "newprojectconfig.h"
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -34,16 +34,16 @@ int main(int argc, char *argv[])
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
     }
 
-    KLocalizedString::setApplicationDomain("kirigamitemplate");
+    KLocalizedString::setApplicationDomain("newproject");
     QCoreApplication::setOrganizationName(u"KDE"_s);
 
     KAboutData aboutData(
         // The program name used internally.
-        u"kirigamitemplate"_s,
+        u"newproject"_s,
         // A displayable program name string.
-        i18nc("@title", "KirigamiTemplate"),
+        i18nc("@title", "NewProject"),
         // The program version string.
-        QStringLiteral(KIRIGAMITEMPLATE_VERSION_STRING),
+        QStringLiteral(NEWPROJECT_VERSION_STRING),
         // Short description of what the app does.
         i18n("Application Description"),
         // The license this code is released under.
@@ -56,16 +56,16 @@ int main(int argc, char *argv[])
                         u"https://yourwebsite.com"_s);
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(aboutData);
-    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.kirigamitemplate"_s));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.newproject"_s));
 
     QQmlApplicationEngine engine;
 
-    auto config = KirigamiTemplateConfig::self();
+    auto config = NewProjectConfig::self();
 
-    qmlRegisterSingletonInstance("org.kde.kirigamitemplate.private", 1, 0, "Config", config);
+    qmlRegisterSingletonInstance("org.kde.newproject.private", 1, 0, "Config", config);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.loadFromModule("org.kde.kirigamitemplate", u"Main");
+    engine.loadFromModule("org.kde.newproject", u"Main");
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

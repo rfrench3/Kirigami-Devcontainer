@@ -5,12 +5,12 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamitemplate
+import org.kde.newproject
 
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18n("KirigamiTemplate")
+    title: i18n("NewProject")
 
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
@@ -45,7 +45,7 @@ Kirigami.ApplicationWindow {
                 onTriggered: root.counter += 1
             },
             Kirigami.Action {
-                text: i18n("About KirigamiTemplate")
+                text: i18n("About NewProject")
                 icon.name: "help-about"
                 onTriggered: root.pageStack.pushDialogLayer(Qt.resolvedUrl("About.qml"))
             },

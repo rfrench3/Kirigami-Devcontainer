@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
 [Desktop Entry]
-Name=KirigamiTemplate
-Comment=KirigamiTemplate Kirigami Application
+Name=NewProject
+Comment=NewProject Kirigami Application
 Version=1.0
-Exec=kirigamitemplate
+Exec=newproject
 Icon=applications-development
 Type=Application
 Terminal=false

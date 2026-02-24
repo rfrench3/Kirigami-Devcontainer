@@ -1,8 +1,8 @@
 # SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
 # SPDX-License-Identifier: LGPL-2.0-or-later
 
-File=kirigamitemplateconfig.kcfg
-ClassName=KirigamiTemplateConfig
+File=newprojectconfig.kcfg
+ClassName=NewProjectConfig
 Mutators=true
 DefaultValueGetters=true
 GenerateProperties=true

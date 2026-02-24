@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(kirigamitemplate VERSION 0.1)
+project(newproject VERSION 0.1)
 
 include(FeatureSummary)
 
@@ -26,8 +26,8 @@ include(KDEClangFormat)
 
 
 ecm_setup_version(${PROJECT_VERSION}
-    VARIABLE_PREFIX KIRIGAMITEMPLATE
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-kirigamitemplate.h"
+    VARIABLE_PREFIX NEWPROJECT
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-newproject.h"
 )
 
 set(QT_EXTRA_COMPONENTS)
@@ -44,8 +44,8 @@ ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard 1.0)
 
 add_subdirectory(src)
 
-install(FILES org.kde.kirigamitemplate.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES org.kde.kirigamitemplate.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES org.kde.newproject.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.newproject.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ki18n_install(po)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
