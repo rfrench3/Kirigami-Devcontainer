@@ -130,7 +130,7 @@ def main():
         f"Project name: {project}\n"
         f"Author name: {author}\n"
         f"Email: {email}\n"
-        "Proceed? (Y/n) "
+        "Proceed? (y/N) "
     )
     if input(confirmation_prompt) in ["y", "Y"]:
         new_info = NewInfo(project, author, email)
