@@ -1,0 +1,42 @@
+{
+	"name": "Wayland KDE devcontainer",
+	"build": {
+		"dockerfile": "../Dockerfile"
+	},
+	"remoteUser": "developer",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"theqtcompany.qt",
+				"ms-vscode.cmake-tools"
+			],
+            "settings": {
+                "cmake.configureOnOpen": true,
+                "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+                "C_Cpp.default.configurations" : [
+                    {
+                        "name": "Linux",
+                        "compilerPath": "/usr/bin/clang",
+                        "cStandard": "c17",
+                        "cppStandard": "c++17",
+                        "intelliSenseMode": "linux-clang-x64"
+                    }
+                ]
+            }
+		},
+		"jetbrains": {
+			"backend": "CLion"
+		}
+	},
+    "privileged": true,
+	"containerEnv": {
+		"WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
+		"XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
+		"XDG_SESSION_TYPE": "${localEnv:XDG_SESSION_TYPE}"
+	},
+	"mounts": [
+		"source=${localEnv:XDG_RUNTIME_DIR},target=${localEnv:XDG_RUNTIME_DIR},type=bind,consistency=cached"
+	],
+	"postCreateCommand": "plasma-apply-desktoptheme breeze-light || true"
+}
